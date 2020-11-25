@@ -106,8 +106,6 @@ classifiers = {
     # 'Subspace Outlier Detection (SOD)':
     #     SOD(contamination=outliers_fraction),
 }
-
-'''---'''
 st.subheader('SELECT A CLASSIFIER ALGORITHM:')
 
 classifier_name = st.selectbox('THE ALGORITHM',[*classifiers])
