@@ -42,8 +42,8 @@ from pyod.models.sod import SOD
 
 # Define the number of inliers and outliers
 
-n_samples = st.slider('Number of samples', 100, 200, 300)
-outliers_fraction = 0.25
+n_samples = st.slider('Number of samples', 200, 1000, step=200)
+outliers_fraction = st.slider('Outliers percent', 0.05, 0.25, step=0.05)
 clusters_separation = [0]
 
 # Compare given detectors under given settings
