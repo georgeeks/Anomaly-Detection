@@ -108,9 +108,9 @@ classifiers = {
 }
 
 '''---'''
+st.subheader('SELECT A CLASSIFIER ALGORITHM:')
 
-
-classifier_name = st.selectbox('**SELECT A CLASSIFIER ALGORITHM:**', [*classifiers])
+classifier_name = st.selectbox('THE ALGORITHM',[*classifiers])
 
 # Show all detectors
 st.subheader(f'Model is: {classifier_name}')
