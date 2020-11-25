@@ -2,8 +2,9 @@ import os
 import sys
 import streamlit as st
 
-st.header('Short implementation of "PYOD" for Anomaly Detection')
-st.info("With [**@Streamlit**](https://www.streamlit.io/) Credits: **Yue Zhao** <zhaoy@cmu.edu> / https://github.com/yzhao062/pyod")
+st.header('Short "PYOD" for Anomaly Detection')
+st.info("With [**Streamlit**](https://www.streamlit.io/)")
+st.info("Credits: **Yue Zhao** <zhaoy@cmu.edu> / https://github.com/yzhao062/pyod")
 
 # License: BSD 2 clause
 # temporary solution for relative imports in case pyod is not installed
