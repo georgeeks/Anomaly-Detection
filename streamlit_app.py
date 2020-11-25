@@ -168,7 +168,6 @@ def predict_for_classifier(classifier_name):
   subplot.set_xlim((-7, 7))
   subplot.set_ylim((-7, 7))
   st.subheader("Outlier detection")
-  plt.savefig(f'{classifier_name}.png', dpi=300)
   st.pyplot(fig)
 
 if classifier_name:
