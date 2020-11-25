@@ -9,7 +9,6 @@ st.subheader("With [Streamlit](https://www.streamlit.io/)")
 # -*- coding: utf-8 -*-
 st.write('Credits: Yue Zhao <zhaoy@cmu.edu> / https://github.com/yzhao062/pyod')
 
-st.write('Compare all detection algorithms by plotting decision boundaries and the number of decision boundaries')
 # License: BSD 2 clause
 # temporary solution for relative imports in case pyod is not installed
 # if pyod is installed, no need to use the following line
