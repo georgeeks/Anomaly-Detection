@@ -132,8 +132,7 @@ def predict_for_classifier(classifier_name):
   
   clf_name = classifier_name
   clf = classifiers[classifier_name]
-  print()
-  print('fitting', clf_name)
+
   # fit the data and tag outliers
   clf.fit(X)
   scores_pred = clf.decision_function(X) * -1
