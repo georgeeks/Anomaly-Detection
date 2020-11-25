@@ -3,11 +3,8 @@ import sys
 import streamlit as st
 
 st.header('Short implementation of "PYOD" for Anomaly Detection')
-st.subheader("With [Streamlit](https://www.streamlit.io/)")
-
-
-# -*- coding: utf-8 -*-
-st.write('Credits: Yue Zhao <zhaoy@cmu.edu> / https://github.com/yzhao062/pyod')
+st.info("With [**@Streamlit**](https://www.streamlit.io/)")
+st.info("Credits: **Yue Zhao** <zhaoy@cmu.edu> / https://github.com/yzhao062/pyod")
 
 # License: BSD 2 clause
 # temporary solution for relative imports in case pyod is not installed
@@ -44,7 +41,8 @@ from pyod.models.sod import SOD
 # TODO: add neural networks, LOCI, SOS, COF, SOD
 
 # Define the number of inliers and outliers
-n_samples = 200
+
+n_samples = st.slider('Number of samples', 100, 200, 300)
 outliers_fraction = 0.25
 clusters_separation = [0]
 
@@ -53,6 +51,7 @@ clusters_separation = [0]
 xx, yy = np.meshgrid(np.linspace(-7, 7, 100), np.linspace(-7, 7, 100))
 n_inliers = int((1. - outliers_fraction) * n_samples)
 n_outliers = int(outliers_fraction * n_samples)
+
 ground_truth = np.zeros(n_samples, dtype=int)
 ground_truth[-n_outliers:] = 1
 
@@ -118,7 +117,7 @@ st.write(f'Parameters are: {classifiers[classifier_name]}')
 # compare model performances
 
 # Fit the model
-fig = plt.figure(figsize=(20, 16))
+fig = plt.figure(figsize=(15, 12))
     
 
 def predict_for_classifier(classifier_name):
