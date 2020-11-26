@@ -41,7 +41,6 @@ from pyod.models.sod import SOD
 # TODO: add neural networks, LOCI, SOS, COF, SOD
 
 # Define the number of inliers and outliers
-
 n_samples = st.slider('Number of samples', 200, 1000, step=200)
 outliers_fraction = st.slider('Outliers percent', 0.05, 0.25, step=0.05)
 clusters_separation = [0]
@@ -63,6 +62,26 @@ detector_list = [LOF(n_neighbors=5), LOF(n_neighbors=10), LOF(n_neighbors=15),
 
 # Show the statics of the data
 st.write(f'Number of inliers: {n_inliers} , Number of outliers: {n_outliers}')
+
+
+st.sidebar.info('**Load examples files:**')
+st.sidebar.info('Shebuti Rayana (2016). ODDS Library [http://odds.cs.stonybrook.edu]. Stony Brook, NY: Stony Brook University, Department of Computer Science.')
+
+import scipy.io
+
+data_path = os.path.join(os.getcwd(),'data')
+mat_files = os.listdir(data_path)
+st.write(mat_files[0])
+mat = scipy.io.loadmat(mat_files[0])
+
+
+st.write(mat)
+#for mat_file in mat_files:
+#    mat = scipy.io.loadmat(mat_file)
+#    mat_files.append(mat)
+st.write(mat_files)
+st.sidebar.selectbox('Select file:', mat_files)
+
 
 random_state = 42
 # Define nine outlier detection tools to be compared
