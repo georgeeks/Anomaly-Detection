@@ -187,3 +187,6 @@ def predict_for_classifier(classifier_name):
 
 if classifier_name:
   predict_for_classifier(classifier_name)
+
+
+st.subheader('FOR BENCHMARKS OPEN THE: [LINK](https://share.streamlit.io/georgeeks/anomaly-detection/benchmark.py)')
