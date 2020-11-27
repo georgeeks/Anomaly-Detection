@@ -6,8 +6,8 @@ from scipy.io import loadmat
 
 
 st.header('Short "PYOD" for Anomaly Detection')
-st.info("With [**Streamlit**](https://www.streamlit.io/)")
-st.info("Credits: **Yue Zhao** <zhaoy@cmu.edu> / https://github.com/yzhao062/pyod")
+st.info("With [**Streamlit**](https://www.streamlit.io/) and [**PYOD**] (https://github.com/yzhao062/pyod)")
+st.info("Credits: **Yue Zhao** <zhaoy@cmu.edu>")
 
 # License: BSD 2 clause
 # temporary solution for relative imports in case pyod is not installed
