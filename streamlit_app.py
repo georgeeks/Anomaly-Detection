@@ -74,6 +74,7 @@ def convert_mat_to_csv(list):
         save_path = os.path.join(os.path.join(current_dir, 'csv_data'), f'{m_file}.csv')
         data.to_csv(save_path, index = None)
 
+current_dir = os.getcwd()
 mat_data = os.listdir(os.path.join(current_dir,'data'))
 csv_folder = os.path.join(os.path.join(current_dir, 'csv_data'))
 if not len(os.listdir(csv_folder)):
