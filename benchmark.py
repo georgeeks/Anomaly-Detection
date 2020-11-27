@@ -101,7 +101,7 @@ for j in range(len(mat_file_list)):
     time_mat = np.zeros([n_ite, n_classifiers])
 
     for i in range(n_ite):
-        st.write("\n... Processing", mat_file, '...', 'Iteration', i + 1)
+        st.info("\n... Processing", mat_file, '...', 'Iteration', i + 1)
         random_state = np.random.RandomState(i)
 
         # 60% data for training and 40% for testing
