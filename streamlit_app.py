@@ -118,7 +118,7 @@ st.write(f'Parameters are: {classifiers[classifier_name]}')
 # compare model performances
 
 # Fit the model
-fig = plt.figure(figsize=(15, 12))
+fig = plt.figure(figsize=(12.5, 10))
     
 
 def predict_for_classifier(classifier_name):
