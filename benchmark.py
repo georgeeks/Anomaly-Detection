@@ -159,11 +159,11 @@ for j in range(n_classifiers):
                   'execution time: {duration}s'.format(
                 clf_name=clf_name, roc=roc, prn=prn, duration=duration))
 
-            time_mat[i, classifiers_indices[clf_name]] = duration
+        '''    time_mat[i, classifiers_indices[clf_name]] = duration
             roc_mat[i, classifiers_indices[clf_name]] = roc
             prn_mat[i, classifiers_indices[clf_name]] = prn
 
-''''    time_list = time_list + np.mean(time_mat, axis=0).tolist()
+    time_list = time_list + np.mean(time_mat, axis=0).tolist()
     temp_df = pd.DataFrame(time_list).transpose()
     temp_df.columns = df_columns
     time_df = pd.concat([time_df, temp_df], axis=0)
