@@ -4,11 +4,16 @@
 # Author: Yue Zhao <zhaoy@cmu.edu>
 # License: BSD 2 clause
 
-
 import os
 import sys
 from time import time
 import streamlit as st
+
+st.header('***Short "PYOD" for Anomaly Detection***')
+st.info("With [**Streamlit**](https://www.streamlit.io/) and [**PYOD**] (https://github.com/yzhao062/pyod)")
+st.info("Credits: **Yue Zhao** <zhaoy@cmu.edu>")
+
+
 
 # temporary solution for relative imports in case pyod is not installed
 # if pyod is installed, no need to use the following line
@@ -63,8 +68,9 @@ mat_file_list = ['arrhythmia.mat',
                  'wbc.mat']
 
 # define the number of iterations
-n_ite = 3
-n_classifiers = 10
+st.write('Choose - (be gentle!) the number of iterations and classifiers')
+n_ite = st.slider('Number of iterations', 1, 10)
+n_classifiers = st.slider('Number of classifiers', 1, 10)
 
 df_columns = ['Data', '#Samples', '# Dimensions', 'Outlier Perc',
               'ABOD', 'CBLOF', 'FB', 'HBOS', 'IForest', 'KNN', 'LOF',
@@ -149,8 +155,8 @@ for j in range(len(mat_file_list)):
 
             roc = round(roc_auc_score(y_test, test_scores), ndigits=4)
             prn = round(precision_n_scores(y_test, test_scores), ndigits=4)
-
-            print('{clf_name} ROC:{roc}, precision @ rank n:{prn}, '
+            st.subheader('Results:')
+            st.write('{clf_name} ROC:{roc}, precision @ rank n:{prn}, '
                   'execution time: {duration}s'.format(
                 clf_name=clf_name, roc=roc, prn=prn, duration=duration))
 
