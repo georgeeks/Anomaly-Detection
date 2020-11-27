@@ -5,7 +5,7 @@ import pandas as pd
 from scipy.io import loadmat
 
 
-st.header('***Short "PYOD" for Anomaly Detection***')
+st.header('**Short "PYOD" for Anomaly Detection**')
 st.info("With [**Streamlit**](https://www.streamlit.io/) and [**PYOD**] (https://github.com/yzhao062/pyod)")
 st.info("Credits: **Yue Zhao** <zhaoy@cmu.edu>")
 

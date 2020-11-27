@@ -9,7 +9,7 @@ import sys
 from time import time
 import streamlit as st
 
-st.header('***Short "PYOD" for Anomaly Detection***')
+st.header('**Short "PYOD" for Anomaly Detection**')
 st.info("With [**Streamlit**](https://www.streamlit.io/) and [**PYOD**] (https://github.com/yzhao062/pyod)")
 st.info("Credits: **Yue Zhao** <zhaoy@cmu.edu>")
 
