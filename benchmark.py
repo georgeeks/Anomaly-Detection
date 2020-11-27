@@ -155,7 +155,6 @@ for j in range(len(mat_file_list)):
 
             roc = round(roc_auc_score(y_test, test_scores), ndigits=4)
             prn = round(precision_n_scores(y_test, test_scores), ndigits=4)
-            st.subheader('Results:')
             st.write('{clf_name} ROC:{roc}, precision @ rank n:{prn}, '
                   'execution time: {duration}s'.format(
                 clf_name=clf_name, roc=roc, prn=prn, duration=duration))
