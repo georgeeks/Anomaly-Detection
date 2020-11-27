@@ -80,8 +80,6 @@ csv_folder = os.path.join(os.path.join(current_dir, 'csv_data'))
 if not len(os.listdir(csv_folder)):
     convert_mat_to_csv(mat_data)
 
-st.write(os.listdir(csv_folder)[2])
-
 random_state = 42
 # Define nine outlier detection tools to be compared
 classifiers = {
