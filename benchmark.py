@@ -164,7 +164,7 @@ for j in range(len(mat_file_list)):
             roc_mat[i, classifiers_indices[clf_name]] = roc
             prn_mat[i, classifiers_indices[clf_name]] = prn
 
-    time_list = time_list + np.mean(time_mat, axis=0).tolist()
+''''    time_list = time_list + np.mean(time_mat, axis=0).tolist()
     temp_df = pd.DataFrame(time_list).transpose()
     temp_df.columns = df_columns
     time_df = pd.concat([time_df, temp_df], axis=0)
@@ -182,4 +182,5 @@ for j in range(len(mat_file_list)):
     # Save the results for each run
     time_df.to_csv('time.csv', index=False, float_format='%.3f')
     roc_df.to_csv('roc.csv', index=False, float_format='%.3f')
-    prn_df.to_csv('prc.csv', index=False, float_format='%.3f')
+    prn_df.to_csv('prc.csv', index=False, float_format='%.3f')'
+'''
