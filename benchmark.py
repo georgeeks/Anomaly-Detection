@@ -10,6 +10,7 @@ from __future__ import print_function
 import os
 import sys
 from time import time
+import streamlit as st
 
 # temporary solution for relative imports in case pyod is not installed
 # if pyod is installed, no need to use the following line
@@ -96,7 +97,7 @@ for j in range(len(mat_file_list)):
     time_mat = np.zeros([n_ite, n_classifiers])
 
     for i in range(n_ite):
-        print("\n... Processing", mat_file, '...', 'Iteration', i + 1)
+        st.write("\n... Processing", mat_file, '...', 'Iteration', i + 1)
         random_state = np.random.RandomState(i)
 
         # 60% data for training and 40% for testing
