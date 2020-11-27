@@ -65,27 +65,6 @@ st.write(f'Number of inliers: {n_inliers} , Number of outliers: {n_outliers}')
 
 
 
-import scipy.io
-st.sidebar.info('**Load examples files:**')
-
-data_path = os.path.join(os.getcwd(),'data')
-mat_files = os.listdir(data_path)
-select_mat_file = st.sidebar.selectbox('mat file', mat_files)
-if select_mat_file:
-    mat_file = os.path.join(data_path, select_mat_file)
-mat = scipy.io.loadmat(mat_file)
-st.write(mat)
-
-st.sidebar.info('Shebuti Rayana (2016). ODDS Library [http://odds.cs.stonybrook.edu]. Stony Brook, NY: Stony Brook University, Department of Computer Science.')
-
-#st.write(mat)
-#for mat_file in mat_files:
-#    mat = scipy.io.loadmat(mat_file)
-#    mat_files.append(mat)
-#st.write(mat_files)
-
-
-
 random_state = 42
 # Define nine outlier detection tools to be compared
 classifiers = {
