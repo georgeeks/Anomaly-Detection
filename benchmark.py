@@ -69,7 +69,7 @@ mat_file_list = ['arrhythmia.mat',
 
 # define the number of iterations
 '''--'''
-st.subheader('Choose - (be gentle!) the number of iterations and classifiers')
+st.subheader('Choose the number of iterations and classifiers - Be gentle: Could take more time and... resources')
 n_ite = st.slider('Number of iterations', 1, 10)
 n_classifiers = st.slider('Number of classifiers', 1, 10)
 
