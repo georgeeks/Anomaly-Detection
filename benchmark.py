@@ -81,7 +81,7 @@ roc_df = pd.DataFrame(columns=df_columns)
 prn_df = pd.DataFrame(columns=df_columns)
 time_df = pd.DataFrame(columns=df_columns)
 
-for j in range(len(n_classifiers)):
+for j in range(n_classifiers):
 
     mat_file = mat_file_list[j]
     mat = loadmat(os.path.join('data', mat_file))
