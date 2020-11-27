@@ -82,7 +82,7 @@ roc_df = pd.DataFrame(columns=df_columns)
 prn_df = pd.DataFrame(columns=df_columns)
 time_df = pd.DataFrame(columns=df_columns)
 
-if st.button('**RUN THE BENCHMARKS**'):
+if st.button('RUN THE BENCHMARKS'):
     for j in range(n_classifiers):
 
         mat_file = mat_file_list[j]
