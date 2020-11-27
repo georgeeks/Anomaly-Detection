@@ -189,5 +189,6 @@ if classifier_name:
   predict_for_classifier(classifier_name)
 
 
+st.info('FOR THE REAL EXAMPLE FILES:')
 st.subheader('[RUN THE BENCHMARKS](https://share.streamlit.io/georgeeks/anomaly-detection/benchmark.py)')
  
