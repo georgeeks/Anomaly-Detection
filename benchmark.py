@@ -160,7 +160,7 @@ for j in range(n_classifiers):
                   'execution time: {duration}s'.format(
                 clf_name=clf_name, roc=roc, prn=prn, duration=duration))
 
-        '''    time_mat[i, classifiers_indices[clf_name]] = duration
+comm = '''    time_mat[i, classifiers_indices[clf_name]] = duration
             roc_mat[i, classifiers_indices[clf_name]] = roc
             prn_mat[i, classifiers_indices[clf_name]] = prn
 
@@ -180,7 +180,7 @@ for j in range(n_classifiers):
     prn_df = pd.concat([prn_df, temp_df], axis=0)
 
     Save the results for each run
-    time_df.to_csv('time.csv', index=False, float_format='%.3f')
-    roc_df.to_csv('roc.csv', index=False, float_format='%.3f')
-    prn_df.to_csv('prc.csv', index=False, float_format='%.3f')'
+#    time_df.to_csv('time.csv', index=False, float_format='%.3f')
+#    roc_df.to_csv('roc.csv', index=False, float_format='%.3f')
+#    prn_df.to_csv('prc.csv', index=False, float_format='%.3f')'
 '''
