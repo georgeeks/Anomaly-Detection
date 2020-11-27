@@ -179,7 +179,7 @@ for j in range(n_classifiers):
     temp_df.columns = df_columns
     prn_df = pd.concat([prn_df, temp_df], axis=0)
 
-    # Save the results for each run
+    Save the results for each run
     time_df.to_csv('time.csv', index=False, float_format='%.3f')
     roc_df.to_csv('roc.csv', index=False, float_format='%.3f')
     prn_df.to_csv('prc.csv', index=False, float_format='%.3f')'
