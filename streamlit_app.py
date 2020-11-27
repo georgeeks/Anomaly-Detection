@@ -63,7 +63,21 @@ detector_list = [LOF(n_neighbors=5), LOF(n_neighbors=10), LOF(n_neighbors=15),
 # Show the statics of the data
 st.write(f'Number of inliers: {n_inliers} , Number of outliers: {n_outliers}')
 
+#IF not already done, convert mat files into csv files
+def convert_mat_to_csv(list):
+    data_path = os.path.join(current_dir,'data')
+    for m_file in list:
+        mat_file = os.path.join(data_path, m_file)
+        mat = scipy.io.loadmat(mat_file)
+        mat = {k:v for k, v in mat.items() if k[0] != '_'}
+        data = pd.DataFrame({k: pd.Series(v[0]) for k, v in mat.items()})
+        save_path = os.path.join(os.path.join(current_dir, 'csv_data'), f'{m_file}.csv')
+        data.to_csv(save_path, index = None)
 
+mat_data = os.listdir(os.path.join(current_dir,'data'))
+csv_folder = os.path.join(os.path.join(current_dir, 'csv_data'))
+if not len(os.listdir(csv_folder)):
+    convert_mat_to_csv(mat_data)
 
 random_state = 42
 # Define nine outlier detection tools to be compared
