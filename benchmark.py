@@ -162,26 +162,36 @@ if st.button('RUN THE BENCHMARKS'):
                     'execution time: {duration}s'.format(
                     clf_name=clf_name, roc=roc, prn=prn, duration=duration))
 
-comm = '''    time_mat[i, classifiers_indices[clf_name]] = duration
-            roc_mat[i, classifiers_indices[clf_name]] = roc
-            prn_mat[i, classifiers_indices[clf_name]] = prn
+                time_mat[i, classifiers_indices[clf_name]] = duration
+                roc_mat[i, classifiers_indices[clf_name]] = roc
+                prn_mat[i, classifiers_indices[clf_name]] = prn
 
-    time_list = time_list + np.mean(time_mat, axis=0).tolist()
-    temp_df = pd.DataFrame(time_list).transpose()
-    temp_df.columns = df_columns
-    time_df = pd.concat([time_df, temp_df], axis=0)
+                time_list = time_list + np.mean(time_mat, axis=0).tolist()
+                temp_df = pd.DataFrame(time_list).transpose()
+                temp_df.columns = df_columns
+                time_df = pd.concat([time_df, temp_df], axis=0)
 
-    roc_list = roc_list + np.mean(roc_mat, axis=0).tolist()
-    temp_df = pd.DataFrame(roc_list).transpose()
-    temp_df.columns = df_columns
-    roc_df = pd.concat([roc_df, temp_df], axis=0)
+                roc_list = roc_list + np.mean(roc_mat, axis=0).tolist()
+                temp_df = pd.DataFrame(roc_list).transpose()
+                temp_df.columns = df_columns
+                roc_df = pd.concat([roc_df, temp_df], axis=0)
 
-    prn_list = prn_list + np.mean(prn_mat, axis=0).tolist()
-    temp_df = pd.DataFrame(prn_list).transpose()
-    temp_df.columns = df_columns
-    prn_df = pd.concat([prn_df, temp_df], axis=0)
+                prn_list = prn_list + np.mean(prn_mat, axis=0).tolist()
+                temp_df = pd.DataFrame(prn_list).transpose()
+                temp_df.columns = df_columns
+                prn_df = pd.concat([prn_df, temp_df], axis=0)
 
-    Save the results for each run
+if st.button('SHOW THE TABLES'):
+    st.subheader('Time complexity')
+    st.write(time_df)
+
+    st.subheader('ROC Performance')
+    st.write(roc_df)
+
+    st.subheader('Precision @ n Performance')
+    st.write(prn_df)
+
+'''    Save the results for each run
 #    time_df.to_csv('time.csv', index=False, float_format='%.3f')
 #    roc_df.to_csv('roc.csv', index=False, float_format='%.3f')
 #    prn_df.to_csv('prc.csv', index=False, float_format='%.3f')'
